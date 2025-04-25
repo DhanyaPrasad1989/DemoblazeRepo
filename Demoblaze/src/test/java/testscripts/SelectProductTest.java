@@ -4,6 +4,7 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import pages.LoginPage;
 import pages.SelectProductPage;
 
 public class SelectProductTest extends Base{

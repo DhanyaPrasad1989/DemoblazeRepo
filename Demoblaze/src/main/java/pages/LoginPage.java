@@ -40,7 +40,7 @@ public class LoginPage {
 	public void submitLogin() {
 		buttonlog.click();
 
-
+driver.switchTo().alert().accept();
 	}
 
 }

@@ -16,6 +16,8 @@ public class AddProductPage {
 	@FindBy(xpath="//a[@onclick='addToCart(1)']")private WebElement addcart;
 	public void addCart()
 	{
+		
 		addcart.click();
+		driver.switchTo().alert().accept();
 	}
 }

@@ -14,6 +14,6 @@ public class SignUpTest extends Base{
 		signpage.signButton();
 		signpage.enterUserName();
 		signpage.password();
-		signpage.signUp();
+		signpage.sign();
 	}
 }

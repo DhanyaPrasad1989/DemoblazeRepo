@@ -27,44 +27,22 @@ public WebDriver driver;
 public  ScreenShotUtility scrshot;
 public Properties properties;
 @BeforeMethod(alwaysRun = true)
-	@Parameters("browser")
-	public void initializeBrowser(String browser) throws Exception
+//	@Parameters("browser")
+	public void initializeBrowser()
 	{
-	try
-	{
-		properties= new Properties();
-		FileInputStream fileinputstream=new FileInputStream(Constants.CONFIGFILE );
-		properties.load(fileinputstream);
-	}
-	catch (Exception e)
-	{
-	System.out.println("Exception handled");
-	}
-	if(browser.equalsIgnoreCase("chrome"))
-	{
-		driver =new ChromeDriver();	
-	}
-	else if(browser.equalsIgnoreCase("edge"))
-	{
-		driver =new EdgeDriver();	
-		
-	}
-	else if(browser.equalsIgnoreCase("firefox"))
-	{
-		driver =new FirefoxDriver();
-	}
-	else
-	{
-		throw new Exception("browser is not correct");
-	}
-	driver.get(properties.getProperty("url"));
+	driver = new ChromeDriver();
 	driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+	driver.get("https://www.demoblaze.com/");
+	driver.manage().window().maximize();
+
+	//driver.get(properties.getProperty("url"));
+	
 	//driver = new ChromeDriver();
 	//driver.get("https://groceryapp.uniqassosiates.com/admin/login");	
-	driver.manage().window().maximize();
+	//driver.manage().window().maximize();
 	}
 
-@AfterMethod(alwaysRun=true)
+/*@AfterMethod(alwaysRun=true)
 	
 public void browserQuit(ITestResult iTestResult) throws IOException {
 	if (iTestResult.getStatus() == ITestResult.FAILURE) {
@@ -74,6 +52,6 @@ public void browserQuit(ITestResult iTestResult) throws IOException {
 
 	driver.quit();
 }
-
+*/
 	
 }

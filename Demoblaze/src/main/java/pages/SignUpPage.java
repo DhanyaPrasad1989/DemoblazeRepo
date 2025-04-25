@@ -35,9 +35,9 @@ public class SignUpPage {
 		
 	}
 	
-	public void  signUp()
+	public void  sign()
 	{
 		signup.click();
-		driver.switchTo().alert().accept();
+		 //driver.switchTo().alert().accept();
 	}
 }
