@@ -8,9 +8,9 @@
 	</listeners>
 	<test thread-count="5" name="Test">
 		<classes>
-			<class name= "SignUpTest">
+			<class name= "name=testscripts.SignUpTest">
 			<methods>
-			<include">
+			<include name="signUp">
 			</include>
 			</methods>
 			</class>
